@@ -1,0 +1,8 @@
+<%= form_with model: team do |f| %>
+  <p><%= f.label :nickname %></p>
+  <%= f.text_field :nickname %>
+  <p><%= f.label :hometown %></p>
+  <%= f.text_field :hometown%>
+  <%= f.submit 'Submit' %>
+<% end %>
+
