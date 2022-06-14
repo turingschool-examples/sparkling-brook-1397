@@ -63,6 +63,6 @@ RSpec.describe 'Competition Show Page' do
     CompetitionTeam.create(team: team3, competition: comp2)
 
     visit competition_path(comp1.id)
-    expect(page).to have_content('Average Player Age: 142')
+    expect(page).to have_content('Average Player Age: 147.0')
   end
 end

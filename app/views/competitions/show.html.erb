@@ -5,3 +5,5 @@
 <% @competition.teams.each do |team| %>
   <p><%= team.nickname %> from <%= team.hometown %></p>
 <% end %>
+
+<p>Average Player Age: <%= @competition.average_age_of_all_players %></p>
