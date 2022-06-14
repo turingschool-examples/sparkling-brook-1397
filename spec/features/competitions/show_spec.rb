@@ -65,4 +65,14 @@ RSpec.describe 'Competition Show Page' do
     visit competition_path(comp1.id)
     expect(page).to have_content('Average Player Age: 147.0')
   end
+
+  it 'has link to register new team' do
+    comp1 = Competition.create(name: 'The Sports Thing', location: 'Somewhere', sport: 'Sportsball')
+
+    visit competition_path(comp1.id)
+
+    expect(page).to have_link('Register New Team')
+    click_link 'Register New Team'
+    expect(current_path).to eq(new_competition_team_path(comp1.id))
+  end
 end
